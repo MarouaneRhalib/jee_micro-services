@@ -7,11 +7,13 @@ import org.mrb.billingservice.model.Customer;
 import org.mrb.billingservice.model.Product;
 import org.mrb.billingservice.repositories.BillRepository;
 import org.mrb.billingservice.repositories.ProductItemRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin("*")
 public class BillingRestController {
     private BillRepository billRepository;
     private ProductItemRepository productItemRepository;

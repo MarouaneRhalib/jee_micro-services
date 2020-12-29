@@ -22,9 +22,17 @@ public class InventoryServiceApplication {
     CommandLineRunner start(ProductRepository productRepository, RepositoryRestConfiguration restConfiguration){
         restConfiguration.exposeIdsFor(Product.class);
         return args -> {
-            productRepository.save(new Product(null,"Laptop",800));
+            productRepository.save(new Product(null,"Laptop",8000));
             productRepository.save(new Product(null,"Smartphone",1200));
             productRepository.save(new Product(null,"Playstation5",1570));
+            productRepository.save(new Product(null,"Smart TV",1900));
+            productRepository.save(new Product(null,"Dishwasher",1099));
+            productRepository.save(new Product(null,"Toaster",170));
+            productRepository.save(new Product(null,"Kettle",300));
+            productRepository.save(new Product(null,"Microwave",699));
+            productRepository.save(new Product(null,"Squeezer",150));
+            productRepository.save(new Product(null,"Freezer",2999));
+            productRepository.save(new Product(null,"Iron",199));
             productRepository.findAll().forEach(product -> {
                 System.out.println(product.toString());
             });
